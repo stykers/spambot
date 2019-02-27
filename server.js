@@ -20,10 +20,10 @@ client.on("message", async message => {
 
         function sendMessage() {
             try {
-                message.channel.send("-----RUN " + count + "START-----");
+                message.channel.send("`-----RUN " + count + " START-----`");
                 message.channel.send("pls search");
                 message.channel.send("pls beg");
-                message.channel.send("-----RUN " + count + "ENDED-----");
+                message.channel.send("`-----RUN " + count + " ENDED-----`");
 
                 let minTime = Math.ceil(2112);
                 let maxTime = Math.floor(3779);
@@ -32,6 +32,7 @@ client.on("message", async message => {
             } catch (error) {
                 sendMessage();
             }
+            count++;
         }
 
         message.delete().catch(O_o => {
